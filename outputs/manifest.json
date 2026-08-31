@@ -1,0 +1,47 @@
+{
+  "artifacts": [
+    {
+      "bytes": 2283766,
+      "path": "figures/Fig01.jpg",
+      "sha256": "c90a538df1fb655b0466fb490243ad74c5ebe92982144776e5a0c0f1e88c1f33"
+    },
+    {
+      "bytes": 1756999,
+      "path": "figures/Fig02.jpg",
+      "sha256": "c1a357458751519357b05c59abafa703e463b787aa6637a2d78c2b59bb751b82"
+    },
+    {
+      "bytes": 1186548,
+      "path": "figures/Fig03.jpg",
+      "sha256": "d21308a6ade8ca9e5b19c573324126aa02879e92ca3b06c0da15e34773908710"
+    },
+    {
+      "bytes": 1719109,
+      "path": "figures/Fig04.jpg",
+      "sha256": "cbe3bfdb5a4b8d6ebd09be41dfb1ed7d10beed2f1435b0f0d517c518a169b594"
+    },
+    {
+      "bytes": 2944,
+      "path": "tables/correlations_solar_cycles.csv",
+      "sha256": "549c971c34c14306ed6edd666895546832722fbcd400d2e8eb2c6d4aacb93a55"
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 181142592,
+      "external": true,
+      "path": "omni2_all_years.dat",
+      "sha256": "fbbd9269e765d2a2441f20fb01808b412b027080ccec39da74bf59d86ceadbed",
+      "source_url": "https://spdf.gsfc.nasa.gov/pub/data/omni/low_res_omni/omni2_all_years.dat"
+    }
+  ],
+  "parameter_summary": {
+    "bytes": 2052,
+    "path": "configs/paper.toml",
+    "sha256": "5230ff5f8584e3a3a390c84e64af3bd5d79796ae6a897f27455747b4a59de02a"
+  },
+  "study_interval": {
+    "end": "2025-05-10",
+    "start": "1995-07-01"
+  }
+}

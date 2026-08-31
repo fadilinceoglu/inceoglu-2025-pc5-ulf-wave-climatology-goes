@@ -1,0 +1,11 @@
+# Direct packages for the CPython 3.9 reproduction environment.
+# Pip resolves their transitive dependencies for the target platform.
+aiohttp==3.13.5
+beautifulsoup4==4.12.2
+joblib==1.3.2
+matplotlib==3.5.3
+netCDF4==1.6.5
+numpy==1.26.3
+pandas==1.5.3
+scipy==1.11.4
+spacepy==0.7.0

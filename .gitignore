@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Test and analysis caches
+.cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+*~
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.netrc
+.pypirc
+credentials.json
+credentials.*.json
+secrets.json
+secrets.*.json
+*.key
+*.pem
+
+# Large runtime data. Only data/README.md and deliberately tiny fixtures belong
+# in Git; source observations and every checkpoint are created locally.
+/data/*
+!/data/README.md
+!/data/fixtures/
+!/data/fixtures/**
+*.pkl
+*.pickle
+*.joblib
+*.nc
+*.nc4
+*.cdf
+*.dat
+*.download.part
+*.tmp
+*.part
+acquisition_transaction.json
+acquisition_complete.json
+detection_incomplete.json
+detection_complete.json
+detection_failures.json
+catalog_incomplete.json
+catalog_complete.json
+observation_counts_by_year.csv
+# Deliberately small, reviewed test fixtures remain the sole data exception.
+!/data/fixtures/**
+
+# Temporary pipeline products
+/temp_results/
+*.log
+
+# Retain only the named paper outputs.
+/outputs/*
+!/outputs/README.md
+!/outputs/figures/
+/outputs/figures/*
+!/outputs/figures/Fig01.jpg
+!/outputs/figures/Fig02.jpg
+!/outputs/figures/Fig03.jpg
+!/outputs/figures/Fig04.jpg
+!/outputs/tables/
+/outputs/tables/*
+!/outputs/tables/correlations_solar_cycles.csv
+!/outputs/manifest.json

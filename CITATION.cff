@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this reproduction software, cite the associated article."
+title: "Reproduction code for the 2025 GOES Pc5 ULF-wave climatology study"
+type: software
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/fadilinceoglu/inceoglu-2025-pc5-ulf-wave-climatology-goes"
+authors:
+  - family-names: Inceoglu
+    given-names: Fadil
+  - family-names: "Loto’aniu"
+    given-names: Paul T. M.
+keywords:
+  - Pc5
+  - ultra-low-frequency waves
+  - GOES
+  - magnetosphere
+  - climatology
+preferred-citation:
+  type: article
+  title: "Occurrence characteristics and amplitude-frequency relationship of the Pc5 ULF waves from 3 decades of GOES data"
+  authors:
+    - family-names: Inceoglu
+      given-names: Fadil
+    - family-names: "Loto’aniu"
+      given-names: Paul T. M.
+  journal: "Scientific Reports"
+  volume: "15"
+  start: "36661"
+  year: 2025
+  date-published: 2025-10-21
+  doi: "10.1038/s41598-025-20474-z"

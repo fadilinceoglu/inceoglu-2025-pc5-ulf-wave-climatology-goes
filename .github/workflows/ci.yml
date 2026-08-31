@@ -1,0 +1,40 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      AIOHTTP_NO_EXTENSIONS: "1"
+      MPLBACKEND: Agg
+      PYTHONHASHSEED: "0"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          # Test the supported 3.9 line; the exact 3.9.6 study environment is
+          # recorded in the provenance and dependency files.
+          python-version: "3.9"
+          cache: pip
+      - name: Install package and test tools
+        run: python -m pip install --upgrade pip && python -m pip install -e ".[full,dev]"
+      - name: Import full-stage dependencies
+        run: >-
+          python -c "from pc5_climatology.acquisition import _aiohttp;
+          import bs4, netCDF4, spacepy;
+          _aiohttp();
+          from aiohttp.helpers import NO_EXTENSIONS;
+          assert NO_EXTENSIONS"
+      - name: Run lint checks
+        run: |
+          python -m ruff check .
+          python -m ruff format --check .
+      - name: Run focused tests
+        run: python -m pytest

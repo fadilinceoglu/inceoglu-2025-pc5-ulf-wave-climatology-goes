@@ -1,0 +1,83 @@
+# Human-readable summary of the paper calculation's executable constants.
+# Runtime stages do not parse this file: src/pc5_climatology/config.py is the
+# authority, and tests/test_parameter_summary.py checks every field for parity.
+
+[study]
+start_date = "1995-07-01"
+end_date = "2025-05-10"
+satellites = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+components = ["radial", "azimuthal", "parallel"]
+time_standard = "UTC"
+
+[preprocessing]
+cadence_seconds = 60
+mfa_baseline_minutes = 30
+magnetic_field_absolute_limit_nt = 1024.0
+orbit_iqr_multiplier = 1.5
+
+[detection]
+window_minutes = 60
+step_minutes = 30
+windows_per_complete_day = 47
+highpass_cutoff_minutes = 30
+highpass_order = 5
+hanning_window = true
+fft_padded_samples = 1440
+frequency_min_hz = 0.0016
+frequency_max_hz = 0.0067
+candidate_amplitude_min_nt = 1.0
+maximum_clean_iterations = 50
+peak_fit_half_window_max = 5
+peak_fit_half_window_min = 2
+monte_carlo_samples = 5000
+repository_random_seed = 2025
+maximum_false_alarm_probability = 0.05
+retained_peaks_per_window = 3
+amplitude_formula = "4 / N * abs(rfft)"
+published_random_seed_recorded = false
+
+[frequency_binning]
+equal_width_bins = 20
+summary = "median amplitude"
+fit = "amplitude = coefficient * frequency ^ exponent"
+
+[mlt.dawn]
+start_hour = 3.0
+end_hour = 9.0
+
+[mlt.day]
+start_hour = 9.0
+end_hour = 15.0
+
+[mlt.dusk]
+start_hour = 15.0
+end_hour = 21.0
+
+[mlt.night]
+start_hour = 21.0
+end_hour = 3.0
+wraps_midnight = true
+
+[solar_wind_conditions]
+lower_quantile = 0.25
+upper_quantile = 0.75
+variables = ["solar_wind_speed", "gsm_bz", "dynamic_pressure"]
+figure_3_bz_uses_sign = true
+
+[temporal]
+annual_bz_uses_absolute_value = true
+omni_last_year = 2025
+highpass_cutoff_frequency_per_year = 0.2
+highpass_order = 5
+solar_cycle_23_start_year = 1996
+solar_cycle_24_boundary_year = 2009
+solar_cycle_24_end_year_exclusive = 2020
+
+[figure_1]
+mlt_histogram_bins = 48
+frequency_histogram_bins = 50
+
+[outputs]
+figure_names = ["Fig01.jpg", "Fig02.jpg", "Fig03.jpg", "Fig04.jpg"]
+correlations_table = "correlations_solar_cycles.csv"
+figure_dpi = 600
