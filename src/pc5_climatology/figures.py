@@ -242,9 +242,6 @@ def _plot_power_law_panel(
     color: str,
     panel_label: str,
     correlation_y: float,
-    correlation_label: str = "Pearson's R",
-    correlation_x: float = 0.98,
-    correlation_alignment: str = "right",
 ) -> None:
     fit = fit_power_law(binned[x_column], binned[y_column])
     axis.plot(binned[x_column], binned[y_column], color=color, linestyle="", marker="d")
@@ -277,10 +274,10 @@ def _plot_power_law_panel(
         color="black",
     )
     axis.text(
-        correlation_x,
+        0.98,
         correlation_y,
-        f"{correlation_label}={correlation:.2f}",
-        horizontalalignment=correlation_alignment,
+        f"Pearson's R={correlation:.2f}",
+        horizontalalignment="right",
         verticalalignment="bottom",
         transform=axis.transAxes,
         fontsize=12,
@@ -375,9 +372,6 @@ def plot_figure_3(checkpoint_dir: Path, omni_path: Path, output_path: Path) -> P
                     color=colors[component],
                     panel_label=panel,
                     correlation_y=0.55,
-                    correlation_label=r"R$^{2}$",
-                    correlation_x=0.55,
-                    correlation_alignment="left",
                 )
                 axis.set_xlim(1, 7)
                 axis.set_xticks([1, 2, 3, 4, 5, 6, 7])

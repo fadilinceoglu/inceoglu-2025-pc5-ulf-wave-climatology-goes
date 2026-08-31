@@ -158,8 +158,9 @@ quartile, and pressure below its first quartile. Moderate conditions require all
 three variables to lie in their corresponding middle-quartile intervals.
 
 Frequency binning, median amplitudes, power-law fitting, and the Pearson
-correlation calculation follow the Figure 2 definitions. Figure 3 retains the
-published figure's \(R^2\) annotation.
+correlation calculation follow the Figure 2 definitions. The tracked
+pre-generated Figure 3 retains the published figure's \(R^2\) annotation. A
+rerun labels the calculated coefficient as `Pearson's R`.
 
 ## Figure 4 and correlation table
 

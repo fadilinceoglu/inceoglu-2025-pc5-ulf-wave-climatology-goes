@@ -140,9 +140,10 @@ Two conventions are important when interpreting the outputs:
 - Each one-hour component window undergoes at most 50 CLEAN iterations. The
   catalog then retains zero to three highest-amplitude peaks that pass both the
   significance and Pc5-frequency tests; absent ranks remain absent.
-- Figure 2 reports `Pearson's R`; Figure 3 retains the published figure's
-  \(R^2\) annotation. Both use the Pearson correlation coefficient calculated
-  between the fitted amplitudes and the binned median amplitudes.
+- Figure-generating code reports `Pearson's R`, calculated between the fitted
+  amplitudes and the binned median amplitudes. The tracked pre-generated Figure
+  3 retains the published figure's \(R^2\) annotation so that the bundled image
+  matches the version of record.
 - For Figure 3, each event is paired with every hourly OMNI record on the same UTC
   calendar date before the solar-wind quantiles and conditioned summaries are
   calculated. This date-level one-to-many expansion is part of the paper

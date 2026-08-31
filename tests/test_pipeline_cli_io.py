@@ -31,6 +31,35 @@ def _touch(paths: list[Path]) -> None:
         path.touch()
 
 
+def test_runtime_fit_annotation_is_pearsons_r() -> None:
+    figure, axis = figure_module.plt.subplots()
+    frequencies = pd.Series([1.0, 2.0, 3.0, 4.0])
+    binned = pd.DataFrame(
+        {
+            "freq": frequencies,
+            "amp": 3.0 * frequencies ** (-0.5),
+        }
+    )
+    try:
+        figure_module._plot_power_law_panel(
+            axis,
+            binned,
+            x_column="freq",
+            y_column="amp",
+            component="radial",
+            color="tab:red",
+            panel_label="a",
+            correlation_y=0.55,
+        )
+
+        annotation = axis.texts[-1]
+        assert annotation.get_text() == "Pearson's R=1.00"
+        assert annotation.get_position() == (0.98, 0.55)
+        assert annotation.get_horizontalalignment() == "right"
+    finally:
+        figure_module.plt.close(figure)
+
+
 def _mark_acquisition_complete(pipeline: ReproductionPipeline) -> None:
     processed = pipeline.paths.checkpoint_dir / "processed_data.pkl"
     outputs = [
