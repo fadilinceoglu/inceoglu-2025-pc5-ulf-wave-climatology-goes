@@ -20,9 +20,10 @@ All figures are rendered in a temporary directory and replace the tracked files
 only after the complete set succeeds. `python scripts/reproduce.py figure N`
 regenerates a single numbered figure.
 
-The tracked `Fig03.jpg` preserves the published figure's \(R^2\) annotation.
-When Figure 3 is regenerated, the plotting code labels the calculated
-coefficient as `Pearson's R`; the numeric calculation is unchanged.
+The tracked `Fig02.jpg` and `Fig03.jpg` preserve the published figures'
+\(R^2\) annotations. When Figure 2 or Figure 3 is regenerated, the plotting code
+labels the calculated coefficient as `Pearson's R`; the numeric calculation is
+unchanged.
 
 In `manifest.json`, `inputs` records the public OMNI source URL and SHA-256 hash,
 and the singular `parameter_summary` record identifies `configs/paper.toml` by

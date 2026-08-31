@@ -136,8 +136,9 @@ calculated in four MLT sectors:
 Each component and sector is fitted with
 \(A(f)=c f^m\) by nonlinear least squares.
 
-The fit annotation is `Pearson's R`, calculated as
-`np.corrcoef(fitted_amplitude, median_amplitude)[0, 1]`.
+The figure-generating code labels the fit annotation as `Pearson's R`, calculated
+as `np.corrcoef(fitted_amplitude, median_amplitude)[0, 1]`. The tracked
+pre-generated Figure 2 retains the published figure's \(R^2\) annotation.
 
 ## Figure 3
 
@@ -159,8 +160,8 @@ three variables to lie in their corresponding middle-quartile intervals.
 
 Frequency binning, median amplitudes, power-law fitting, and the Pearson
 correlation calculation follow the Figure 2 definitions. The tracked
-pre-generated Figure 3 retains the published figure's \(R^2\) annotation. A
-rerun labels the calculated coefficient as `Pearson's R`.
+pre-generated Figure 3 likewise retains the published figure's \(R^2\)
+annotation. A rerun labels the calculated coefficient as `Pearson's R`.
 
 ## Figure 4 and correlation table
 

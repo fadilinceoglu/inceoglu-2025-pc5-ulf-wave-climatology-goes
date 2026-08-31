@@ -141,9 +141,9 @@ Two conventions are important when interpreting the outputs:
   catalog then retains zero to three highest-amplitude peaks that pass both the
   significance and Pc5-frequency tests; absent ranks remain absent.
 - Figure-generating code reports `Pearson's R`, calculated between the fitted
-  amplitudes and the binned median amplitudes. The tracked pre-generated Figure
-  3 retains the published figure's \(R^2\) annotation so that the bundled image
-  matches the version of record.
+  amplitudes and the binned median amplitudes. The tracked pre-generated Figures
+  2 and 3 retain the published figures' \(R^2\) annotations so that the bundled
+  images match the version of record.
 - For Figure 3, each event is paired with every hourly OMNI record on the same UTC
   calendar date before the solar-wind quantiles and conditioned summaries are
   calculated. This date-level one-to-many expansion is part of the paper
